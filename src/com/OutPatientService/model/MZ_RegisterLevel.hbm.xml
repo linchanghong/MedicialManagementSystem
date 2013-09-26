@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.OutPatientService.model">
+	<class name="MZ_RegisterLevel" table="mz_registerLevel">
+		<id name="registerLevel_id">
+			<generator class="native"/>
+		</id>
+		<property name="registerLevel_name" not-null="true"/>
+		<property name="registerLevel_zjm"  not-null="true"/>
+		<property name="registerLevel_fee" not-null="true"/>
+		<property name="registerLevel_py"  not-null="true"/>
+		<property name="registerLevel_code" not-null="true"/>
+		
+	</class>
+</hibernate-mapping>

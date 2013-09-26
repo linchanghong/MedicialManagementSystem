@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.BasicInfoManagement.model">
+	<class name="JC_YP_DrugManuf" table="jc_yp_drugManuf">
+		<id name="drugManuf_id">
+			<generator class="native"/>
+		</id>
+		<property name="drugManuf_name" />
+		<property name="drugManuf_number" />
+		<property name="drugManuf_zjm"/>
+		<property name="drugManuf_address" />
+		<property name="drugManuf_postcode" />
+		<property name="drugManuf_telephone" />
+		<property name="drugManuf_fax" />
+		<property name="drugManuf_linkman"/>
+		
+	
+			
+	</class>
+</hibernate-mapping>

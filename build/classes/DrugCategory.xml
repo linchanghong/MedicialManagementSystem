@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- <constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
+	<constant name="struts.i18n.encoding" value="GBK"/> -->
+	
+	<package name="DrugCategory" namespace="/DrugCate" extends="struts-default">
+	
+	
+	<action name="drugCategoryAdd" class="com.BasicInfoManagement.action.DrugCategoryAction" method="add">
+	<result name="success">/JSP_BasicInfoMain/DrugCategory_index.jsp</result>
+	</action>
+	
+	<action name="drugCategoryDel" class="com.BasicInfoManagement.action.DrugCategoryAction" method="delete">
+	<result name="success">/JSP_BasicInfoMain/DrugCategory_index.jsp</result>
+	</action>
+	
+	<action name="drugCategoryUpdate" class="com.BasicInfoManagement.action.DrugCategoryAction" method="update">
+	<result name="success">/JSP_BasicInfoMain/DrugCategory_Update.jsp</result>
+	</action>
+	
+	<action name="drugCategorySaveUpdate" class="com.BasicInfoManagement.action.DrugCategoryAction" method="saveUpdate">
+	<result name="success">/JSP_BasicInfoMain/DrugCategory_index.jsp</result>
+	</action>
+	
+	<action name="drugCategroyQuery" class="com.BasicInfoManagement.action.DrugCategoryAction" method="query">
+	<result name="success">/JSP_BasicInfoMain/DrugCategory_Query.jsp</result>
+	<result name="queryAll">/JSP_BasicInfoMain/DrugCategory_index.jsp</result>
+	</action>
+	
+	<action name="returnIndex" class="com.BasicInfoManagement.action.DrugCategoryAction" method="returnIndex">
+	<result name="success">/JSP_BasicInfoMain/DrugCategory_index.jsp</result>
+	</action>
+	
+	</package>
+</struts>

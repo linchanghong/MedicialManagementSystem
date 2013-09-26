@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+<package name="OutpatientPayment" extends="struts-default" namespace="/OutpatientPayment">
+		<action name="add" class="com.BasicInfoManagement.action.OutpatientPaymentAction" method="add">
+			<result  name="success">/JSP_BasicInfoMain/OutpatientPayment.jsp</result>
+		</action>
+		<action name="queryAll" class="com.BasicInfoManagement.action.OutpatientPaymentAction" method="queryAll">
+			<result name="success">/JSP_BasicInfoMain/OutpatientPayment.jsp</result>
+		</action>
+		<action name="query" class="com.BasicInfoManagement.action.OutpatientPaymentAction" method="query">
+			<result name="success">/JSP_BasicInfoMain/OutpatientPayment_query.jsp</result>
+		</action>
+		<action name="delete" class="com.BasicInfoManagement.action.OutpatientPaymentAction" method="delete">
+			<result name="success">/JSP_BasicInfoMain/OutpatientPayment.jsp</result>
+		</action>
+		<action name="modify2" class="com.BasicInfoManagement.action.OutpatientPaymentAction" method="modify2">
+			<result name="success">/JSP_BasicInfoMain/OutpatientPayment.jsp</result>
+		</action>
+		<action name="modify1" class="com.BasicInfoManagement.action.OutpatientPaymentAction" method="modify1">
+			<result name="success">/JSP_BasicInfoMain/OutpatientPayment_modify.jsp</result>
+		</action>
+		<action name="isInput" class="com.BasicInfoManagement.action.OutpatientPaymentAction" method="isInput">
+			<result name="success"></result>
+		</action>
+	
+</package>
+
+</struts>

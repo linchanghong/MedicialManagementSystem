@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.OutPatientService.model.MZ_Paymode" table="MZ_Paymode">
+		<id name="paymode_id" type="int">
+			<generator class="native" />
+		</id>
+		<property name="invoice_N0" not-null="true" />
+		<property name="mode_code"  />
+		<property name="tot_cost" />
+        <property name="real_cost" />
+        <property name="bank_name" />
+		<property name="account" />
+        <property name="pos_no" />
+        <property name="check_no" />
+		<property name="cancel_falg" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"	
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.BasicInfoManagement.model">
+<class name="JC_YP_DrugInfo" table="jc_yp_drugInfo">
+   <id name="drugInfo_id">
+	  <generator class="native"/>
+   </id>
+   <property name="drugInfo_name" not-null="true"/>
+   <many-to-one name="drugCode" class="JC_YP_DrugCode" unique="true" lazy="false">
+      <column name="drugCode_id" not-null="true"></column>
+   </many-to-one>
+   <property name="drugInfo_standard" not-null="true"/>
+   <many-to-one name="drugCategory" class="JC_YP_DrugCategory" unique="true" lazy="false">
+      <column name="drugCategory_id" not-null="true"></column>
+   </many-to-one>
+   <many-to-one name="drugManuf" class="JC_YP_DrugManuf" unique="true" lazy="false">
+      <column name="drugManuf_id" not-null="true"></column>
+   </many-to-one>
+   <property name="drugInfo_approve" not-null="true"/>
+   <property name="drugInfo_saleclassification" not-null="true"/>
+   <property name="drugInfo_dosage" not-null="true"/>
+   <property name="drugInfo_zjm" not-null="true"/>
+</class>
+</hibernate-mapping>

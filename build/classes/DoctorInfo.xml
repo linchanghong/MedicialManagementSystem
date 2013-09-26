@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
+	<constant name="struts.i18n.encoding" value="GBK"/>
+	<!-- 以下的为 W Y B 负责的基础信息维护 action  -->
+	<package name="Doctor" namespace="/DoctorInfo" extends="struts-default">		
+		<action name="add" class="com.BasicInfoManagement.action.DoctorInfoAction" method="add">
+			<result name="success">/JSP_BasicInfoMain/DoctorInfo_index.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+		<action name="queryAll" class="com.BasicInfoManagement.action.DoctorInfoAction" method="queryAll">
+			<result name="success">/JSP_BasicInfoMain/DoctorInfo_index.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+		<action name="delete" class="com.BasicInfoManagement.action.DoctorInfoAction" method="delete">
+			<result name="success">/JSP_BasicInfoMain/DoctorInfo_index.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+		<action name="modify1" class="com.BasicInfoManagement.action.DoctorInfoAction" method="modify1">
+			<result name="success">/JSP_BasicInfoMain/DoctorInfo_modify.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+		<action name="modify2" class="com.BasicInfoManagement.action.DoctorInfoAction" method="modify2">
+			<result name="success">/JSP_BasicInfoMain/DoctorInfo_index.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+		<action name="query" class="com.BasicInfoManagement.action.DoctorInfoAction" method="query">
+			<result name="success">/JSP_BasicInfoMain/DoctorInfo_query.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+		<!-- 以下用于验证用户输入的数据的唯一性 -->
+		<action name="validate" class="com.BasicInfoManagement.action.DoctorInfoValidateAction" method="numberValidate">
+			<result name="success"></result>
+		</action>
+	</package>	
+</struts>

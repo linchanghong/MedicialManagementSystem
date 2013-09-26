@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
+	<constant name="struts.i18n.encoding" value="GB18030"/>
+
+<include file="DeptInfo.xml"></include>  <!-- 科室信息维护 -->
+<!--dlq登录维护 -->
+<include file="LoginMaintain.xml"></include>
+<!-- dlq门诊收费种类 -->
+<include file="OutpatientPayment.xml"></include>
+<!-- dlq门诊 -->
+<include file="OutpatientRegistration.xml"></include>   
+
+
+    <include file="DeptInfo.xml"></include>  <!-- 科室信息维护 -->
+    <include file="DoctorInfo.xml"></include> <!-- 医生信息维护 -->
+    <include file="BedInfo.xml"></include>   <!-- 床位信息维护 -->
+    <include file="lsp.xml"></include>
+<include file="DrugCode.xml"></include><!-- 药品编码维护 -->
+<include file="DrugInfo.xml"></include><!-- 药品信息维护 -->
+
+<include file="DrugManuf.xml"></include><!-- 药品生产商维护 -->
+<include file="DrugCategory.xml"></include>
+<include file="Supplier.xml"></include>
+<include file="CipherPres.xml"></include>
+<include file="Incompatibility.xml"></include>
+<!-- 门诊挂号管理 -->
+<include file="MenZhen/register.xml"></include><!-- 挂号 -->
+<include file="RegisterLevel.xml"></include><!-- 药品生产商维护 -->
+<include file="RegPatient.xml"></include>
+<include file="MenZhen/MZ_PrescriptionDetails.xml"></include><!-- 处方明细 -->
+<include file="MenZhen/MZ_Prescription.xml"></include><!-- 处方 -->
+<!-- 门诊收费管理 -->
+<include file="MenZhen/OutpatientCharge.xml"></include>
+<include file="DrugstoreLSP.xml"></include>
+</struts>

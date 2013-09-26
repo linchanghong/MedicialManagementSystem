@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"	
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.OutPatientService.model">
+	<class name="MZ_DayEnd" table="mz_dayEnd">
+		<id name="dayEnd_id">
+			<generator class="native"/>
+		</id>
+		<property name="dayEnd_beginDate" not-null="true"/>
+		<property name="dayEnd_endDate" not-null="true"/>
+		<property name="dayEnd_oper" not-null="true"/>
+		<property name="dayEnd_feeCount" not-null="true"/>
+		<property name="dayEnd_danHaoZC" not-null="true"/>
+		<property name="dayEnd_danHaoTH" not-null="true"/>
+		<property name="dayEnd_danHaoCount" not-null="true"/>
+
+	</class>
+</hibernate-mapping>

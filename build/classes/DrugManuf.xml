@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- DrugManuf action  -->
+	<package name="drugManuf" namespace="/DrugManuf" extends="struts-default">		
+		<action name="add" class="com.BasicInfoManagement.action.DrugManufAction" method="add">
+			<result name="success">/JSP_BasicInfoMain/DrugManuf_index.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+		<action name="queryAll" class="com.BasicInfoManagement.action.DrugManufAction" method="queryAll">
+			<result name="success">/JSP_BasicInfoMain/DrugManuf_index.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+		<action name="delete" class="com.BasicInfoManagement.action.DrugManufAction" method="delete">
+			<result name="success">/JSP_BasicInfoMain/DrugManuf_index.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+		<action name="modify1" class="com.BasicInfoManagement.action.DrugManufAction" method="modify1">
+			<result name="success">/JSP_BasicInfoMain/DrugManuf_modify.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+		<action name="modify2" class="com.BasicInfoManagement.action.DrugManufAction" method="modify2">
+			<result name="success">/JSP_BasicInfoMain/DrugManuf_index.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+		<action name="query" class="com.BasicInfoManagement.action.DrugManufAction" method="query">
+			<result name="success">/JSP_BasicInfoMain/DrugManuf_query.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+		<action name="findAll" class="com.BasicInfoManagement.action.DrugManufAction" method="findAll">
+			<result name="findAll">/JSP_BasicInfoMain/DrugManuf_find.jsp</result>
+		</action>
+		<action name="Find" class="com.BasicInfoManagement.action.DrugManufAction" method="Find">
+			<result name="findsuccess">/JSP_BasicInfoMain/DrugManuf_find.jsp</result>
+		</action>
+	</package>	
+</struts>

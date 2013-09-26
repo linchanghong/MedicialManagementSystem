@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+   <package name="druginfo" namespace="/DrugInfo"  extends="struts-default">
+       <action name="druginfo_*" class="com.BasicInfoManagement.action.DrugInfoAction" method="{1}">
+         <result name="queryAll">/JSP_BasicInfoMain/DrugInfo_index.jsp</result>
+         <result name="addsuccess">/JSP_BasicInfoMain/DrugInfo_index.jsp</result>
+         <result name="deletesuccess">/JSP_BasicInfoMain/DrugInfo_index.jsp</result>
+         <result name="beforemodify">/JSP_BasicInfoMain/DrugInfo_modify.jsp</result>
+         <result name="modifysuccess">/JSP_BasicInfoMain/DrugInfo_index.jsp</result>
+         <result name="qurysuccess">/JSP_BasicInfoMain/DrugInfo_index.jsp</result>
+       </action>
+    </package>
+</struts>

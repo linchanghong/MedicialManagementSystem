@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
+	<constant name="struts.i18n.encoding" value="GBK"/>
+	<package name="RegisterLevel" namespace="/RegisterLevel" extends="struts-default">		
+		<action name="add" class="com.OutPatientService.action.RegisterLevelAction" method="add">
+			<result name="success">/JSP_OutPatientService/RegisterLevel_index.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+		<action name="queryAll" class="com.OutPatientService.action.RegisterLevelAction" method="queryAll">
+			<result name="success">/JSP_OutPatientService/RegisterLevel_index.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+		<action name="delete" class="com.OutPatientService.action.RegisterLevelAction" method="delete">
+			<result name="success">/JSP_OutPatientService/RegisterLevel_index.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+		<action name="query" class="com.OutPatientService.action.RegisterLevelAction" method="query">
+			<result name="success">/JSP_OutPatientService/RegisterLevel_index.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+
+	</package>	
+</struts>

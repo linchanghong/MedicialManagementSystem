@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"	
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.OutPatientService.model">
+	<class name="MZ_PrescriptionDetails" table="mz_prescriptionDetails">
+		<id name="prescriptionDetails_id">
+			<generator class="native"/>
+		</id>
+		<property name="prescriptionDetails_number" not-null="true"/>
+		<property name="prescriptionDetails_deptcode" not-null="true"/>
+		<property name="prescriptionDetails_drugcode" not-null="true"/>
+		<property name="prescriptionDetails_drugname" not-null="true"/>
+		<property name="prescriptionDetails_batch" not-null="true"/><!-- 批号 -->
+		<property name="prescriptionDetails_drugtype" not-null="true"/>
+		<property name="prescriptionDetails_drugquality" not-null="true"/>
+		<property name="prescriptionDetails_drugspecs" not-null="true"/>
+		<property name="prescriptionDetails_showunit" not-null="true"/>
+		<property name="prescriptionDetails_applydate" not-null="true"/>
+		<property name="prescriptionDetails_applystate" not-null="true"/>
+		<property name="prescriptionDetails_applynumber" not-null="true"/>
+		<property name="prescriptionDetails_modifyflag" not-null="true"/>
+		<property name="prescriptionDetails_chargeflag" not-null="true"/>
+		<property name="prescriptionDetails_doseonce" not-null="true"/>
+		<property name="prescriptionDetails_doseunit" not-null="true"/>
+		<property name="prescriptionDetails_usecode" not-null="true"/>
+		<property name="prescriptionDetails_usename" not-null="true"/>
+		<property name="prescriptionDetails_frecode" not-null="true"/>
+		<property name="prescriptionDetails_money"/>
+		<property name="prescriptionDetails_totalmoney"></property>
+		
+		
+		
+		
+		
+	</class>
+</hibernate-mapping>

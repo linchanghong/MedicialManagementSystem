@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"	
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.BasicInfoManagement.model">
+	<class name="JC_SF_CombinationAccounting" table="jc_sf_combinationAccounting">
+		<id name="combinationAccounting_id">
+			<generator class="native"/>
+		</id>
+		<property name="combinationAccounting_name"  not-null="true" />
+		<property name="combinationAccounting_number"  not-null="true" />
+		<property name="combinationAccounting_price"  not-null="true"/>
+		<property name="combinationAccounting_zjm"  not-null="true" />
+	</class>
+</hibernate-mapping>

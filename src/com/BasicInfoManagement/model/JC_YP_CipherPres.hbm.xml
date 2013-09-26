@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.BasicInfoManagement.model">
+
+	
+
+	<class name="JC_YP_CipherPres" table="jc_yp_cipherPres">
+
+		
+		<id name="cipherPres_id">
+			<generator class="native"/>
+			<!--  <generator class="sequence">
+				<param name="seq_cs_student"/>
+			</generator>-->
+		</id>
+		<property name="cipherPres_name" type="string" not-null="true"/>
+		<property name="cipherPres_number" type="string"/>
+		<property name="cipherPres_drugsof" type="string"/>
+		<property name="cipherPres_indication" type="string"/>
+		<property name="cipherPres_efficacy" type="string"/>
+		<property name="cipherPres_taboo" type="string"/>
+	</class>
+</hibernate-mapping>

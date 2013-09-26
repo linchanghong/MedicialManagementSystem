@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.BasicInfoManagement.model">
+	<class name="JC_SF_OutpatientPayment" table="jc_sf_outpatientPayment">
+		<id name="outpatientPayment_id">
+			<generator class="native"/>
+		</id>
+		<property name="outpatientPayment_name" not-null="true"/>
+		<property name="outpatientPayment_number" type="text" not-null="true"/>
+		<property name="outpatientPayment_property" type="text" not-null="true"/>
+		<property name="outpatientPayment_object" type="text" not-null="true"/>
+		<property name="outpatientPayment_remark" type="text" not-null="true"/>
+		<property name="outpatientPayment_zjm" type="text" not-null="true"/>
+		<!-- 映射与用户的多对一关系 -->
+		
+		<!-- 映射与回复的一对一关系 -->
+		
+	</class>
+</hibernate-mapping>

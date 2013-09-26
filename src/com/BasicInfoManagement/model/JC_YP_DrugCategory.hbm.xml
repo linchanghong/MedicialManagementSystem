@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.BasicInfoManagement.model.JC_YP_DrugCategory" table="jc_yp_drugCategory">
+		<id name="drugCategory_id" type="java.lang.Integer">
+			<generator class="native"/>
+		</id>
+
+		<property name="drugCategory_name" not-null="true"/>
+		<property name="drugCategory_number" not-null="true"/>
+		<property name="drugCategory_zjm" />
+	</class>
+</hibernate-mapping>

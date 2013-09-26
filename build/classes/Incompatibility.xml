@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="incompate" extends="struts-default" namespace="/Icom">
+		<action name="query" class="com.BasicInfoManagement.action.IncompatibilityAction"
+			method="queryAll">
+			<result name="success">/JSP_BasicInfoMain/IncompatibilityInfo_query.jsp</result>
+			<!-- <result name="failure">/index.jsp</result> -->
+		</action>
+		<action name="conditionQuery" class="com.BasicInfoManagement.action.IncompatibilityAction"
+			method="query">
+			<result name="success">/JSP_BasicInfoMain/IncompatibilityInfo_query.jsp</result>
+		</action>
+		<action name="getIncompate" class="com.BasicInfoManagement.action.IncompatibilityAction" method="getIncompate">
+		    <result name="success">/JSP_BasicInfoMain/IncompateInfo_save.jsp</result>
+		
+		</action>
+		<action name="save" class="com.BasicInfoManagement.action.IncompatibilityAction" method="saveIncompate">
+		    <result name="success">/JSP_BasicInfoMain/IncompatibilityInfo_query.jsp</result>
+		</action>
+		<action name="delete" class="com.BasicInfoManagement.action.IncompatibilityAction" method="deleteIncompate">
+		    <result name="success">/JSP_BasicInfoMain/IncompatibilityInfo_query.jsp</result>
+		</action>
+		<action name="getModInfo" class="com.BasicInfoManagement.action.IncompatibilityAction" method="getIncomNumb">
+		    <result name="success">/JSP_BasicInfoMain/IncompateInfo_modify.jsp</result>
+		</action>
+		<action name="update" class="com.BasicInfoManagement.action.IncompatibilityAction" method="updateIncompate">
+		    <result name="success">/JSP_BasicInfoMain/IncompatibilityInfo_query.jsp</result>
+		</action>
+	</package>
+
+</struts>

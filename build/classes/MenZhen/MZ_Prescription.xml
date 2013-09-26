@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+<package name="Prescription" extends="struts-default" namespace="/Prescription">
+		<action name="add" class="com.OutPatientService.action.PrescriptionAction" method="add">
+			<result  name="success">/JSP_OutPatientService/Pre_index.jsp</result>
+		</action>
+		<action name="queryAll" class="com.OutPatientService.action.PrescriptionAction" method="queryAll">
+			<result name="success">/JSP_OutPatientService/Pre_index.jsp</result>
+		</action>
+		<action name="fillData" class="com.OutPatientService.action.PrescriptionAction" method="fillData">
+			<result name="success">/JSP_OutPatientService/Pre_patientdetails.jsp</result>
+		</action>
+		<action name="findPatient" class="com.OutPatientService.action.PrescriptionAction" method="findPatient">
+			<result name="success">/JSP_OutPatientService/Pre_details.jsp</result>
+		</action>
+		<action name="filldata" class="com.OutPatientService.action.PrescriptionAction" method="filldata">
+			<result name="success">/JSP_OutPatientService/Pre_patientdetails.jsp</result>
+		</action>
+		
+</package>
+
+</struts>

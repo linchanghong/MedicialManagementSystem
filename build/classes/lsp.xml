@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+
+<struts>
+
+	<package name="tags" extends="struts-default" namespace="/JSP_BasicInfoMain">
+	
+		<action name="add" class="com.BasicInfoManagement.action.PayDetailAction"
+			method="AddPayDetail">
+			<result type="chain" name="success">show</result>
+		</action>
+		
+	<action name="show" class="com.BasicInfoManagement.action.PayDetailAction"
+		method="ShowPage">
+		<result name="success">/JSP_BasicInfoMain/payDetail.jsp</result>
+	</action>
+	
+		<action name="delete" class="com.BasicInfoManagement.action.PayDetailAction"
+		method="DeletePayDetail">
+		<result type="chain" name="success">show</result>
+		</action>
+		
+	<action name="update" class="com.BasicInfoManagement.action.PayDetailAction"
+		method="UpdatePayDetail">
+		<result type="chain" name="success">show</result>
+	</action>
+	<action name="QueryPayDetail" class="com.BasicInfoManagement.action.PayDetailAction"
+		method="QueryPayDetail">
+		<result  name="success">/JSP_BasicInfoMain/payDetail_query.jsp</result>
+	</action>
+		<action name="JudgePayDetailByNumber" class="com.BasicInfoManagement.action.PayDetailAction"
+		method="JudgePayDetailByNumber">
+		<result  name="success"></result>
+	</action> 
+			<action name="JudgePayDetailByName" class="com.BasicInfoManagement.action.PayDetailAction"
+		          method="JudgePayDetailByName">
+		<result  name="success"></result>
+	</action>
+	<action name="JudgePayDetailChangeByNumber"
+		class="com.BasicInfoManagement.action.PayDetailAction"
+		method="JudgePayDetailChangeByNumber">
+		<result name="success"></result>
+	</action>
+	<action name="JudgePayDetailChangeByName"
+		class="com.BasicInfoManagement.action.PayDetailAction"
+		method="JudgePayDetailChangeByName">
+		<result name="success"></result>
+	</action> 
+
+
+
+
+
+
+	<action name="addCAccounting"
+		class="com.BasicInfoManagement.action.CombinationAccountingAction"
+		method="AddCAccounting">
+		<result type="chain" name="success">showCAccounting</result>
+	</action>
+		
+	<action name="showCAccounting" class="com.BasicInfoManagement.action.CombinationAccountingAction"
+		method="ShowPage">
+		<result name="success">/JSP_BasicInfoMain/CombinationAccounting_index.jsp</result>
+	</action>
+	
+		<action name="deleteCAccounting" class="com.BasicInfoManagement.action.CombinationAccountingAction"
+		method="DeleteCAccounting">
+		<result type="chain" name="success">showCAccounting</result>
+		</action>
+		
+	<action name="updateCAccounting" class="com.BasicInfoManagement.action.CombinationAccountingAction"
+		method="UpdateCAccounting">
+		<result type="chain" name="success">showCAccounting</result>
+	</action>
+	<action name="QueryCAccounting" class="com.BasicInfoManagement.action.CombinationAccountingAction"
+		method="QueryCAccountingDetail">
+		<result  name="success">/JSP_BasicInfoMain/CombinationAccounting_query.jsp</result>
+	</action> 
+		<action name="JudgeCAccountingByNumber" class="com.BasicInfoManagement.action.CombinationAccountingAction"
+		method="JudgeCAccountingByNumber">
+		<result  name="success"></result>
+	</action> 
+			<action name="JudgeCAccountingByName" class="com.BasicInfoManagement.action.CombinationAccountingAction"
+		method="JudgeCAccountingByName">
+		<result  name="success"></result>
+	</action>
+	<action name="JudgeCAccountingChangeByNumber"
+		class="com.BasicInfoManagement.action.CombinationAccountingAction"
+		method="JudgeCAccountingChangeByNumber">
+		<result name="success"></result>
+	</action>
+	<action name="JudgeCAccountingChangeByName"
+		class="com.BasicInfoManagement.action.CombinationAccountingAction"
+		method="JudgeCAccountingChangeByName">
+		<result name="success"></result>
+	</action> 
+	</package>
+
+</struts>

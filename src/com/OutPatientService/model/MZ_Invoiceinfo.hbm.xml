@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.OutPatientService.model.MZ_Invoiceinfo" table="MZ_Invoiceinfo">
+		<id name="invoiceinfo_id" type="int">
+			<generator class="native" />
+		</id>
+		<property name="invoice_No" not-null="true" />
+		<property name="printinvoice_flag" not-null="true" />
+		<property name="card_no" />
+		<property name="prg_date" />
+		<property name="name" />
+		<property name="paykind_code" />
+		<property name="tot_cost" />
+		<property name="real_cost" />
+		<property name="oper_code" />
+		<property name="oper_date" />
+		<property name="cancel_flag" />
+		<property name="cancel_invoice" />
+		<property name="cancel_code" />
+		<property name="cancel_date" />
+		<property name="balance_code" />
+		<property name="balance_date" />
+	</class>
+</hibernate-mapping>

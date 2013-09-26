@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"	
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.OutPatientService.model">
+	<class name="MZ_Prescription" table="mz_prescription">
+		<id name="prescription_id">
+			<generator class="native"/>
+		</id>
+		<property name="prescription_number" not-null="false"/>
+		<property name="prescription_state" not-null="false"/>
+		<property name="prescription_casenumber" not-null="false"/><!-- 病例号 -->
+		<property name="prescription_name" not-null="false"/>
+		<property name="prescription_sex" />
+		<property name="prescription_age" />
+		<property name="prescription_paykind" />
+		<property name="prescription_patientdeptcode" />
+		<property name="prescription_date" />
+		<property name="prescription_doctor" not-null="false"/>
+		<property name="prescription_doctordept" not-null="false"/>
+		<property name="prescription_feecode" not-null="false"/>
+		<property name="prescription_feedate" not-null="false"/>
+		<property name="prescription_billsnumber" />
+		<property name="prescription_cost" />
+		<property name="prescription_dispenser" />
+		<property name="prescription_dispensedept" />
+		<property name="prescription_dispensedate" />
+		<property name="prescription_sender" />
+		<property name="prescription_senddate" />
+		<property name="prescription_senddept" />
+		<property name="prescription_validstate" />
+		<property name="prescription_backer" />
+		<property name="prescription_backdate" />
+		<property name="prescription_canceler" />
+		<property name="prescription_canceldate" />
+		
+		
+		
+		
+		
+	</class>
+</hibernate-mapping>

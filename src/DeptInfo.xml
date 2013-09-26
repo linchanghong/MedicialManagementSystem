@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
+	<constant name="struts.i18n.encoding" value="GBK"/>
+	<!-- 以下的为 W Y B 负责的基础信息维护 action  -->
+	<package name="validate" namespace="/DeptInfo" extends="struts-default">		
+		<action name="add" class="com.BasicInfoManagement.action.DeptInfoAction" method="add">
+			<result name="success">/JSP_BasicInfoMain/DeptInfo_index.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+		<action name="queryAll" class="com.BasicInfoManagement.action.DeptInfoAction" method="queryAll">
+			<result name="success">/JSP_BasicInfoMain/DeptInfo_index.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+		<action name="delete" class="com.BasicInfoManagement.action.DeptInfoAction" method="delete">
+			<result name="success">/JSP_BasicInfoMain/DeptInfo_index.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+		<action name="modify1" class="com.BasicInfoManagement.action.DeptInfoAction" method="modify1">
+			<result name="success">/JSP_BasicInfoMain/DeptInfo_modify.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+		<action name="modify2" class="com.BasicInfoManagement.action.DeptInfoAction" method="modify2">
+			<result name="success">/JSP_BasicInfoMain/DeptInfo_index.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+		<action name="query" class="com.BasicInfoManagement.action.DeptInfoAction" method="query">
+			<result name="success">/JSP_BasicInfoMain/DeptInfo_query.jsp</result>
+			<result name="login">/reg.jsp</result>
+		</action>
+
+	
+    
+		<!-- 以下用于验证用户输入的数据的唯一性 -->
+		<action name="numberValidate" class="com.BasicInfoManagement.action.DeptInfoValidateAction" method="numberValidate">
+			<result name="success"></result>
+		</action>
+		
+		<action name="nameValidate" class="com.BasicInfoManagement.action.DeptInfoValidateAction" method="nameValidate">
+			<result name="success"></result>
+		</action>
+		
+		<action name="zjmValidate" class="com.BasicInfoManagement.action.DeptInfoValidateAction" method="zjmValidate">
+			<result name="success"></result>
+		</action>
+	</package>	
+
+</struts>

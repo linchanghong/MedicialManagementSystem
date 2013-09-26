@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"	
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.BasicInfoManagement.model">
+	<class name="JC_RY_DoctorInfo" table="jc_ry_doctorInfo">
+		<id name="doctorInfo_id">
+			<generator class="native"/>
+		</id>
+		<property name="doctorInfo_name" not-null="true"/>
+		<property name="doctorInfo_age" not-null="false"/>
+		<property name="doctorInfo_sex" not-null="false"/>
+		
+		<!-- 映射与用户的多对一关系 -->
+		<many-to-one name="deptInfo" class="JC_LC_DeptInfo" lazy="false">
+			<column name="deptInfo_id" not-null="true"></column>
+		</many-to-one>
+	</class>
+</hibernate-mapping>

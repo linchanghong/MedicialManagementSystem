@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+  <package name="RegPatient" extends="struts-default" namespace="/RegPatient">
+  
+     <action name="queryAll" class="com.OutPatientService.action.RegPatientAction" method="queryAll">
+        <result name="success">/JSP_OutPatientService/registerPatient_index.jsp</result>
+     </action>
+     <action name="save" class="com.OutPatientService.action.RegPatientAction" method="save">
+        <result name="success">/JSP_OutPatientService/registerPatient_index.jsp</result>
+     </action>
+     <action name="delete" class="com.OutPatientService.action.RegPatientAction" method="delete">
+        <result name="success">/JSP_OutPatientService/registerPatient_index.jsp</result>
+     </action>
+     <action name="getStringTime" class="com.OutPatientService.action.RegPatientAction" method="getStringTime">
+        <result name="success">/JSP_OutPatientService/regPatient_save.jsp</result>
+     </action>
+     <action name="conditionquery" class="com.OutPatientService.action.RegPatientAction" method="conditionQuery">
+        <result name="success">/JSP_OutPatientService/regPatient_query.jsp</result>
+     </action>
+  </package>
+</struts>

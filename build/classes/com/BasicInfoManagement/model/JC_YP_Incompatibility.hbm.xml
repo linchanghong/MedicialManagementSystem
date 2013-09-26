@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.BasicInfoManagement.model">
+	<class name="JC_YP_Incompatibility" table="jc_yp_incompatibility">
+		
+		<id name="incompatibility_id" >
+			<generator class="native"/>
+			<!--  <generator class="sequence">
+				<param name="seq_cs_student"/>
+			</generator>-->
+		</id>
+		<property name="incompatibility_drugA" not-null="true"/>
+		<property name="incompatibility_drugB" not-null="true"/>
+		<property name="incompatibility_result" />
+	</class>
+</hibernate-mapping>
+

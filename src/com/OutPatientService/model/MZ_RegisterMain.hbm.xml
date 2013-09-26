@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"	
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.OutPatientService.model">
+	<class name="MZ_RegisterMain" table="mz_registerMain">
+		<id name="registerMain_id">
+			<generator class="native"/>
+		</id>
+		<property name="registerMain_No" not-null="true"/>
+		<property name="registerMain_date" not-null="true"/>
+		<property name="registerMain_caseNo" not-null="true"/>
+		<property name="registerMain_name" not-null="true"/>
+		<property name="registerMain_sex" not-null="true"/>
+		<property name="registerMain_birthday" not-null="true"/>
+		<property name="registerMain_phoneNo" not-null="true"/>
+		<property name="registerMain_address" not-null="true"/>
+		<property name="registerMain_rlCode" not-null="true"/>
+		<property name="registerMainr_rlName" not-null="true"/>
+		<property name="registerMain_fee" not-null="true"/>
+		<property name="registerMain_deptCode" not-null="true"/>
+		<property name="registerMain_deptName" not-null="true"/>
+		<property name="registerMain_docName" not-null="true"/>
+		<property name="registerMain_invoiceNo" not-null="true"/>
+		<property name="registerMain_operName" not-null="true"/>
+		<property name="registerMain_operDate" not-null="true"/>
+		<property name="registerMain_status" not-null="true"/>
+		
+		
+		
+	</class>
+</hibernate-mapping>

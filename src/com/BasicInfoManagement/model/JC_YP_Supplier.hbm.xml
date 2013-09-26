@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"	
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.BasicInfoManagement.model">
+	<class name="JC_YP_Supplier" table="jc_yp_supplier">
+		<id name="supplier_id" >
+			<generator class="native"/>
+		</id>
+		<property name="supplier_type"  not-null="true"/>
+		<property name="supplier_name"  not-null="true"/>
+		<property name="supplier_number" not-null="true"/>
+		<property name="supplier_zjm" />
+		<property name="supplier_address" />
+		<property name="supplier_postcode" />
+		<property name="supplier_telephone" />
+		<property name="supplier_fax" />
+		<property name="supplier_linkman" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
+	<constant name="struts.i18n.encoding" value="GBK"/>
+	<!-- 以下的为 W Y B 负责的门诊挂号 action  -->
+	<package name="MenZhen" namespace="/Register" extends="struts-default">	
+	
+	    <interceptors>
+			<interceptor name="MyInterceptor" class="com.OutPatientService.action.RegisterInterceptor"></interceptor>
+		</interceptors>	
+		<action name="login" class="com.OutPatientService.action.RegisterAction" method="login">
+			<result name="success">/JSP_OutPatientService/register.jsp</result>
+			<result name="error">/JSP_OutPatientService/YaoKu_login.jsp</result>
+			<interceptor-ref name="MyInterceptor"></interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		
+		<action name="processLogin" class="com.OutPatientService.action.RegisterAction" method="processLogin">
+			<result name="success">/JSP_OutPatientService/register.jsp</result>
+			<result name="error">/JSP_OutPatientService/YaoKu_login.jsp</result>
+		</action>
+		
+		<!-- 自动生成处方号 -->
+		<action name="sequenceCode" class="com.OutPatientService.action.RegisterAction" method="sequenceCode">
+			<result name="success">/JSP_OutPatientService/register.jsp</result>
+		</action>
+		
+		<!-- 用于在ajax中找到相应的患者信息 -->
+		<action name="findPaitent" class="com.OutPatientService.action.RegisterAction" method="findPaitent">
+			<result name="success"></result>
+		</action>
+		<!-- 用于在ajax中找到相应挂号信息 -->
+		<action name="findRegister" class="com.OutPatientService.action.RegisterAction" method="findRegister">
+			<result name="success"></result>
+		</action>
+		<action name="quitRegister" class="com.OutPatientService.action.RegisterAction" method="quitRegister">
+			<result name="success">/JSP_OutPatientService/QuitRegisterNo.jsp</result>
+		</action>
+		
+		<!-- 保存挂号信息 -->
+		<action name="save" class="com.OutPatientService.action.RegisterAction" method="save">
+			<result name="success">/JSP_OutPatientService/showDetails.jsp</result>
+		</action>
+		<!-- 导出到word文档 -->
+		<action name="down" class="com.OutPatientService.action.RegisterAction" method="down">
+			<result name="success">/JSP_OutPatientService/down.jsp</result>
+		</action>
+		<!-- 日结 -->
+		<action name="dayEnd" class="com.OutPatientService.action.RegisterDayEndAction" method="dayEnd">
+			<result name="success"></result>
+		</action>
+		<action name="findMaxBeginDate" class="com.OutPatientService.action.RegisterDayEndAction" method="findMaxBeginDate">
+			<result name="success"></result>
+		</action>
+		<action name="saveDayEnd" class="com.OutPatientService.action.RegisterDayEndAction" method="saveDayEnd">
+			<result name="success">/JSP_OutPatientService/registerDayEnd.jsp</result>
+		</action>
+		<action name="quit" class="com.OutPatientService.action.RegisterAction" method="quit">
+			<result name="success">/JSP_OutPatientService/YaoKu_login.jsp</result>
+		</action>
+		<!-- 显示所有挂号信息 -->
+		<action name="queryAll" class="com.OutPatientService.action.RegisterDayEndAction" method="queryAll">
+			<result name="success">/JSP_OutPatientService/registerAll.jsp</result>
+		</action>
+		
+		<action name="query" class="com.OutPatientService.action.RegisterDayEndAction" method="query">
+			<result name="success">/JSP_OutPatientService/registerQuery.jsp</result>
+		</action>
+		<action name="queryAllDayEnd" class="com.OutPatientService.action.RegisterDayEndAction" method="queryAllDayEnd">
+			<result name="success">/JSP_OutPatientService/registerDayEndQuery.jsp</result>
+		</action>
+		<action name="queryAllDayEnd_q" class="com.OutPatientService.action.RegisterDayEndAction" method="queryAllDayEnd_q">
+			<result name="success">/JSP_OutPatientService/registerDayEndQuery_q.jsp</result>
+		</action>
+		<action name="registerBuDa" class="com.OutPatientService.action.RegisterDayEndAction" method="registerBuDa">
+			<result name="success">/JSP_OutPatientService/showDetails.jsp</result>
+		</action>
+		
+		<action name="findPrescription" class="com.OutPatientService.action.RegisterDayEndAction" method="findPrescription">
+			<result name="success"></result>
+		</action>
+		<action name="changePrescription" class="com.OutPatientService.action.RegisterDayEndAction" method="changePrescription">
+			<result name="success">/JSP_OutPatientService/shouFei.jsp</result>
+		</action>
+	</package>	
+</struts>

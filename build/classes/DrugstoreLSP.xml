@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+
+<struts>
+	<package name="Drugstore" extends="struts-default" namespace="/JSP_OutPatientService">
+	<!-- 配药管理 -->
+		<!-- 在主页面中显示所有患者 -->
+		<action name="ShowPatientNameDetail"
+			class="com.OutPatientService.action.Drugstore_DosageAction" method="ShowPatientNameDetail">
+			<result name="success">/JSP_OutPatientService/Drugstore_Dosage_index.jsp
+			</result>
+		</action>
+		<!-- 点击患者显示患者药材信息 -->
+		<action name="ShowDrugDetailByPatientName"
+			class="com.OutPatientService.action.Drugstore_DosageAction" method="ShowDrugDetailByPatientName">
+			<result type="chain" name="success">ShowPatientNameDetail
+			</result>
+		</action>
+
+		<action name="CommitFaYao"
+			class="com.OutPatientService.action.Drugstore_DosageAction" method="CommitFaYao">
+			<result type="chain" name="success">ShowPatientNameDetail
+			</result>
+		</action>
+		
+		<!-- 发药管理 -->
+		<!-- 在主页面中显示所有患者 -->
+		<action name="FaYaoShowPatientNameDetail"
+			class="com.OutPatientService.action.Drugstore_DosageAction" method="FaYaoShowPatientNameDetail">
+			<result name="success">/JSP_OutPatientService/Drugstore_SendDrug_index.jsp
+			</result>
+		</action>
+		<!-- 点击患者显示患者药材信息 -->
+		<action name="FaYaoShowDrugDetailByPatientName"
+			class="com.OutPatientService.action.Drugstore_DosageAction" method="FaYaoShowDrugDetailByPatientName">
+			<result type="chain" name="success">FaYaoShowPatientNameDetail
+			</result>
+		</action>
+
+		<action name="SuccessFaYao"
+			class="com.OutPatientService.action.Drugstore_DosageAction" method="SuccessFaYao">
+			<result type="chain" name="success">FaYaoShowPatientNameDetail
+			</result>
+		</action>
+		<!-- 从已发药的处方中根据处方号查询信息 -->
+		<action name="YiFaYaoShowDrugDetailByPatientName"
+			class="com.OutPatientService.action.Drugstore_DosageAction" method="YiFaYaoShowDrugDetailByPatientName">
+			<result type="chain" name="success">FaYaoShowPatientNameDetail
+			</result>
+		</action>
+		
+
+			<!-- 根据前台返回的发票号在前台显示相应病人处方药材信息 -->
+			<action name="ShowDrugDetailByInvoiceNumber"
+			class="com.OutPatientService.action.Drugstore_DosageAction" method="ShowDrugDetailByInvoiceNumber">
+			<result name="success">
+			</result>
+		</action>
+	</package>
+
+</struts>
+
